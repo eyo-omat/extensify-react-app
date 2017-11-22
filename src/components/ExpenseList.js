@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
+
 export const ExpenseList = (props) => (
     <div>
         { props.expenses.length === 0 ? (<p>No expenses</p>) :
@@ -15,7 +16,10 @@ export const ExpenseList = (props) => (
 );
 
 const mapStateToProps = (state) => {
-    return {expenses: selectExpenses(state.expenses, state.filters)};
+    return {
+        expenses: selectExpenses(state.expenses, state.filters)
+
+    };
 
 };
 
