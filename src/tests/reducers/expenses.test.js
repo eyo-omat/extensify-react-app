@@ -55,3 +55,10 @@ test("should return expense object after removing provided id", () => {
 
 });
 
+test("should set expenses", () => {
+
+    const action = expenseReducer(expenseData, { type: "SET_EXPENSE", expenses: expenseData[1] });
+    expect(action).toEqual(expenseData[1]);
+
+});
+
