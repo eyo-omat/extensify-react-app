@@ -5,11 +5,14 @@ import { connect } from 'react-redux';
 export const LoginPage = ({ startLogin }) => {
 
     return (
-        <div>
-            {/*<h1>Login</h1>*/}
-            {/*<input type="text" placeholder="username"/>*/}
-            {/*<input type="password" placeholder="password"/>*/}
-            <button onClick={startLogin}>Login</button>
+        <div className="box-layout">
+
+            <div className="box-layout__box">
+                <h1 className="box-layout__title">Expensify</h1>
+                <p>Its time to get you expenses under control.</p>
+
+                <button onClick={startLogin} className="button">Login with Google</button>
+            </div>
         </div>
 
     );
